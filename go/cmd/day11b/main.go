@@ -18,7 +18,7 @@ func main() {
 		stoneValue, _ := strconv.Atoi(v)
 		hallway[stoneValue] = 1
 	}
-	for i := range 75 {
+	for range 75 {
 		newHallway := map[int]int{}
 		for s, c := range hallway {
 			newStones := blink(s)
@@ -27,7 +27,6 @@ func main() {
 			}
 		}
 		hallway = newHallway
-		fmt.Println(i)
 	}
 	var total int
 	for _, count := range hallway {
